@@ -64,6 +64,8 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
                 .addValue("price", updateParam.getPrice())
                 .addValue("quantity", updateParam.getQuantity())
                 .addValue("id", itemId);
+
+        template.update(sql, param);
     }
 
     @Override
